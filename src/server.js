@@ -22,8 +22,8 @@ app.post('/send-email', (req, res) => {
 
     let mailOptions = {
         from: email, 
-        to: 'some.email@gmail.com', 
-        subject: `Message from portfolio: ${subject}`, 
+        to: 'marc.camps.garreta@gmail.com', 
+        subject: `Portfolio message from ${email}: ${subject}`, 
         text: message
     };
 
