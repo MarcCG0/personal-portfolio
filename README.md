@@ -19,7 +19,7 @@ To get a development environment running:
 
 1. Clone the repository to your local machine:
    ```bash
-   git clone [https://github.com/your-username/your-repository-name.git](https://github.com/MarcCG0/personal-portfolio.git)
+   git clone [https://github.com/MarcCG0/personal-portfolio.git]
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
