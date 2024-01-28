@@ -4,11 +4,12 @@ import GithubIcon from "../../../public/github-icon.svg";
 import LinkedinIcon from "../../../public/linkedin-icon.svg";
 import Link from "next/link";
 import Image from "next/image";
+import SentSuccessful from "./SentSuccessful";
 
 const EmailSection = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
   const [emailError, setEmailError] = useState(false); // New state for email error
-
+  const [emailData, setEmailData] = useState(null);
   const handleSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
@@ -29,6 +30,7 @@ const EmailSection = () => {
       if (response.ok) {
         setEmailSubmitted(true);
         setEmailError(false); // Reset the error state on successful submission
+        setEmailData(data);
       } else {
         setEmailError(true); // Set the error state on unsuccessful submission
       }
@@ -49,10 +51,10 @@ const EmailSection = () => {
           Let&apos;s Connect
         </h5>
         <p className="text-[#ADB7BE] mb-4 max-w-md">
-          {" "}
-          I&apos;m currently looking for new opportunities, my inbox is always
-          open. Whether you have a question or just want to say hi, I&apos;ll
-          try my best to get back to you!
+          I'm always seeking new opportunities, and my inbox is always
+          open. Whether you have a question, wish to discuss a project,
+          or simply want to say hello, please don't hesitate to reach out.
+          I'll make sure to get back to you as soon as possible!
         </p>
         <div className="socials flex flex-row gap-2">
           <a href="https://github.com/MarcCG0" target="_blank" rel="noopener noreferrer">
@@ -65,9 +67,11 @@ const EmailSection = () => {
       </div>
       <div>
         {emailSubmitted ? (
-          <p className="text-blue-200 text-3xl font-bold text-center mt-4 animate-pulse">
-            Email sent successfully!
-          </p>   
+          <SentSuccessful
+          email={emailData.email}
+          subject={emailData.subject}
+          body={emailData.message}
+        />
         ) : (
           <>
             {emailError ? (
