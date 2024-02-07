@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "public/**", "use": "@vercel/static" },
+    { "src": "src/server.js", "use": "@vercel/node" },
+    { "src": "next.config.js", "use": "@vercel/next" }
+  ],
+  "routes": [{ "handle": "filesystem" }]
+}
