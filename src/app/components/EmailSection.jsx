@@ -51,10 +51,10 @@ const EmailSection = () => {
           Let&apos;s Connect
         </h5>
         <p className="text-[#ADB7BE] mb-4 max-w-md">
-          I'm always seeking new opportunities, and my inbox is always
+          I&apos;m always seeking new opportunities, and my inbox is always
           open. Whether you have a question, wish to discuss a project,
-          or simply want to say hello, please don't hesitate to reach out.
-          I'll make sure to get back to you as soon as possible!
+          or simply want to say hello, please don&apos;t hesitate to reach out.
+          I&apos;ll make sure to get back to you as soon as possible!
         </p>
         <div className="socials flex flex-row gap-2">
           <a href="https://github.com/MarcCG0" target="_blank" rel="noopener noreferrer">
@@ -76,7 +76,7 @@ const EmailSection = () => {
           <>
             {emailError ? (
               <p className="text-red-500 text-xl font-bold text-center mt-4">
-                Couldn't send the email. Please try again later.
+                Couldn&apos;t send the email. Please try again later.
               </p>
             ) : null}
             <form className="flex flex-col" onSubmit={handleSubmit}>
