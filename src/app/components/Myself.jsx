@@ -82,7 +82,8 @@ const HeroSection = () => {
   </Link>
   <Link
     href="/Marc_CV.pdf"
-    download="CV.pdf"
+    //download="CV.pdf"
+    target="_blank"
     className="px-6 py-3 w-full sm:w-fit rounded-full bg-gradient-to-br from-blue-500 to-green-500 hover:bg-slate-200 text-white transform transition-transform hover:scale-105"
   >
     Download CV
