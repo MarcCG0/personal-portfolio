@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
-import GithubIcon from "../../../public/github-icon.svg";
-import LinkedinIcon from "../../../public/linkedin-icon.svg";
+import GithubIcon from "public/github-icon.svg";
+import LinkedinIcon from "public/linkedin-icon.svg";
 import Link from "next/link";
 import Image from "next/image";
 import SentSuccessful from "./SentSuccessful";
@@ -20,7 +20,7 @@ const EmailSection = () => {
     };
 
     try {
-      const response = await fetch('http://localhost:3001/send-email', {
+      const response = await fetch('api/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
