@@ -102,7 +102,7 @@ const HeroSection = () => {
         >
         <div className="w-[150px] h-[150px] lg:w-[250px] lg:h-[250px] relative mx-auto sm:ml-auto rounded-full overflow-hidden hover:scale-110 transition-transform duration-300" style={{ border: "4px solid linear-gradient(to bottom right, #06B6D4, #10B981)" }}>
   <Image
-    src="/images/myself.png"
+    src="/images/myself.jpg"
     alt="Marc Camps"
     width={300}
     height={300}
